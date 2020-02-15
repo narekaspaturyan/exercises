@@ -1,0 +1,144 @@
+
+
+ԽՆԴԻՐՆԵՐ
+
+
+/// Միջին թվաբանական 
+
+let arr = [2,4,-2,-4,];
+
+
+function average(array){
+  
+let result = array.filter((item,  array) => {   
+   return item >0
+})
+ 
+let finalResult = result.reduce((sum, current) => 
+                                sum + current/result.length, 0);
+return finalResult
+
+}
+
+
+console.log(average(arr))
+
+
+
+/// Միջին թվաբանական  լուծում 2 
+
+let arr = [2,4,-2,-4,9];
+
+
+function average(array){
+  let a =[]
+ for(let i=0; i<array.length; i++){
+  
+   if(array[i]>=0){
+     a.push(array[i])
+   }
+   
+ }
+  
+  let c=0
+  for(let i=0; i<a.length; i++){
+  
+   c=(c+a[i])
+  }
+  let d= c/a.length
+  
+return d
+
+}
+
+
+console.log(average(arr))
+
+
+Ուսուցչի տոն 
+
+let a=[1,5,4,7,9,0,8,7,9,9]
+
+
+function  goods(array){
+
+let a=[]
+
+for(let i=0;i<array.length;i++){ ////// ստուգում ենք որ 0 չլինի
+  if(array[i]===0){
+    array.splice(i,1)
+  }
+  
+}
+
+a.push(Math.min(...array))
+    
+a.push(Math.max(...array))
+
+let finalResult = a.reduce((sum, current) => 
+                                sum + current, 0);
+
+
+return finalResult
+
+}
+
+console.log(goods(a))
+
+
+
+
+Զույգ 
+
+let arr=[-4,-5,1,2,3]
+
+function mult(array){
+ let a = []
+ for(let i=0; i<array.length; i++){
+   
+  a.push(array[i]*array[i+1])
+   
+ }
+  
+  a.pop()
+   
+  let b =Math.max(...a)
+   
+ return b
+  
+}
+console.log(mult(arr))
+
+
+
+
+
+Մեյլ ստուգող 
+
+let string = "n@ak"
+
+function s(str){
+  let valid = false
+
+  let a = str.indexOf("@");
+  let b = str.lastIndexOf("@");  
+  let c= str.indexOf(" ");
+  let d = str.indexOf(")");
+  let e= str.indexOf("(");
+  let f= str.indexOf("/");
+  let g= str.indexOf(".")
+  let h=str.lastIndexOf(".")
+  if (c==-1 && d==-1 && e==-1 && f==-1 
+    &&a-b==0&& g>a && g!=str.length-1){
+    valid=true
+  }
+
+
+  if(valid){
+    return true
+  }else return false
+
+  }
+
+  console.log(s(string))
+
